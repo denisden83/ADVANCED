@@ -1,5 +1,5 @@
-//footer.footer
-//  h2 Copyright &copy;
+//- footer.footer
+//-  h2 Copyright &copy;
 //------------------------------------------ footer
 footer.footer
 
@@ -14,11 +14,13 @@ footer.footer
         .footer__center
 
             .footer__center-links
+
                 ul.links
-                    each item in links
+                    each item in linksFooter
                         li.links__item= `${item}`
 
             .footer__center-icons
+
                 ul.socials
                     each item in socials
                         li.socials__item
@@ -32,8 +34,9 @@ footer.footer
     //------------------------- bottom
     .footer__bottom
 
-        .footer__bottom-auth-name &copy; Владимир Астахов
-        .footer__bottom-vertical-bar |
-        .footer__bottom-info Создано с любовью в LoftSchool
-        .footer__bottom-vertical-bar |
-        .footer__bottom-year 2016
+        .signature
+            .signature__auth-name &copy; Владимир Астахов
+            .signature__vertical-bar |
+            .signature__info Создано с любовью в LoftSchool
+            .signature__vertical-bar |
+            .signature__year 2016
