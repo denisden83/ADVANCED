@@ -7,4 +7,104 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-  h1 Страничка "Обо Мне"  
+  //------------------ hero
+  section.hero
+
+    .hero__links
+      ul.socials
+        each item in socials
+          li.socials__item
+            a(href=`${item[1]}`).socials__link
+              +icon(`${item[0]}`, 'socials__link-icon')
+
+    .hero__menu
+      a(href="#").hamburger
+        +icon('hamburger','hamburger__svg')
+
+    .hero__block
+      .section-title.hero__writing
+        +svg('portfolio_header', 'section-title__svg')
+      .user.hero__user
+        .user__pic
+          +image('avatar.jpg', 'avatar', 'user__pic-img')
+        .user__description
+           .user__name Владимир Астахов
+           .user__info Личный сайт разработчика
+
+    .hero__down-btns
+      a(href="#").down-btn
+        +icon('arrow_down', 'down-btn__svg')
+
+  //------------------ about
+  //------------------ left
+  section.about
+    .about__left
+
+      .about__triangle
+        .triangle.triangle--fill--beige
+          svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 85" preserveaspectratio="none" class="triangle__svg")
+            polygon(class = "triangle__polygon" points="0,0   0,86   500.8,86   500.8,75.5")
+
+      .about__left-title
+        .user-title
+          +svg('about_header', 'user-title__background')
+          .block-title.user-title__heading Обо мне
+
+      .about__left-content
+        .user-description
+          .user-description__image
+            +image('avatar-big.jpg', 'avatar', 'user-description__avatar')
+          .user-description__data
+            .user-description__title
+              .block-subtitle Кто я
+            .user-description__text.text-content
+              p Lorem, ipsum dolor sit amet consectetur adipisicing elit. In tempore non modi ex quia deserunt, beatae sint explicabo consequuntur maxime cupiditate, aliquam repudiandae tenetur natus labore voluptatum fugiat totam veritatis.
+              p Lorem, ipsum dolor sit amet consectetur adipisicing elit. In tempore non modi ex quia deserunt, beatae sint explicabo consequuntur maxime cupiditate, aliquam repudiandae tenetur natus labore voluptatum fugiat totam veritatis.
+
+    //------------------ right
+    .about__right
+
+      .about__triangle
+        .triangle.triangle--fill--white
+          svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 85" preserveaspectratio="none" class="triangle__svg")
+            polygon(class = "triangle__polygon" points="500,0   500,86   0,86   0,75.5")
+
+      .about__right-title
+        .block-subtitle Чем я могу быть вам полезен
+
+      .about__right-description.text-content
+        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. In tempore non modi ex quia deserunt, beatae sint explicabo consequuntur maxime cupiditate, aliquam repudiandae tenetur natus labore voluptatum fugiat totam veritatis.
+
+      .about__right-content
+        ul.skills-list
+          each skillsrow in skills
+            li.skills-list__item.skills-row
+              .skills-row__title #{skillsrow[0]}
+              ul.skills-row__list
+                each skill in skillsrow[1]
+                  li.skills-row__item
+                    figure.skill
+                      svg(viewBox='0 0 110 110').skill__svg
+                        circle(r="38" cx="50%" cy="50%" fill="none").skill__circle.skill__circle--under
+                        circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class=`circle-${skill[1]}`).skill__circle.skill__circle--over
+                      span.skill__title #{skill[0]}
+
+  //------------------ map
+  section.map
+
+    .google-map
+
+    .map__data
+      .contacts
+        h2.contacts__title
+          .block-subtitle Контакты
+        address.contacts__data
+          ul.contacts__list
+            each contact in contacts
+              li.contacts-row.contacts__item
+                .contacts-row__icon
+                  +icon(contact[0], 'contacts__icon-svg')
+                .contacts-row__title #{contact[1]}
+
+    .map__footer
+      include ../common/footer

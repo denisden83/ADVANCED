@@ -1,2 +1,39 @@
+//footer.footer
+//  h2 Copyright &copy;
+//------------------------------------------ footer
 footer.footer
-  h2 Copyright &copy;
+
+    //-------------------------- top
+    .footer__top
+
+        //-------left
+        .footer__left
+
+            .footer__left-goal Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+        //-------center
+        .footer__center
+
+            .footer__center-links
+                ul.links
+                    each item in links
+                        li.links__item= `${item}`
+
+            .footer__center-icons
+                ul.socials
+                    each item in socials
+                        li.socials__item
+                            a(href=`${item[1]}`).socials__link
+                                +icon(`${item[0]}`, 'socials__link-icon')
+        //-------right
+        .footer__right
+            .footer__right-quote Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+            .footer__right-person - Martin Golding
+
+    //------------------------- bottom
+    .footer__bottom
+
+        .footer__bottom-auth-name &copy; Владимир Астахов
+        .footer__bottom-vertical-bar |
+        .footer__bottom-info Создано с любовью в LoftSchool
+        .footer__bottom-vertical-bar |
+        .footer__bottom-year 2016

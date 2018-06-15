@@ -1,5 +1,7 @@
 <template lang="pug">
-  app-title
+    div
+        app-title
+        h1 SOME H1
 </template>
 
 <script>
