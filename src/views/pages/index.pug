@@ -2,6 +2,10 @@ extends ../auth.layout.pug
 
 block content
   .auth-block
+    //---------------------------- auth-btn
+    .auth-block__auth-btn
+
+      a(href='#').auth-btn Авторизоваться
 
     //---------------------------- content
     .auth-block__content
@@ -9,10 +13,10 @@ block content
 
         .user
           .user__pic
-            +image('avatar.jpg', 'avatar', 'user__pic-img')
+            +image('avatar-big.jpg', 'avatar', 'user__pic-img')
           .user__description
             .user__name Владимир Астахов
-            .user__info Личный сайт разработчика
+            .user__info Личный сайт веб разработчика
       .auth-block__content-socials
 
         ul.socials
@@ -24,12 +28,10 @@ block content
 
         ul.links
           each item in linksHeader
-            li.links__item= `${item}`
+            li.links__item
+              a.links__link(href="#")= `${item}`
 
-    //---------------------------- auth-btn
-    .auth-block__auth-btn
 
-      .auth-btn
 
     //---------------------------- writing
     .auth-block__writing

@@ -1,0 +1,30 @@
+.auth-block{
+  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  background: url("./assets/images/water.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: #ffffff;
+
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.auth-block__auth-btn{
+  align-self: start;
+  justify-self: right;
+  margin-right: 160px;
+  margin-top: 25px;
+}
+.auth-block__content{
+
+}
+
+.auth-block__writing{
+  align-self: end;
+  margin-bottom: 40px;
+}

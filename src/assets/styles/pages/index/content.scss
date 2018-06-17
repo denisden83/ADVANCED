@@ -1,0 +1,102 @@
+.auth-block__content{
+  width: 380px;
+  height: 410px;
+  display: grid;
+  grid-template:
+    't' 2.5fr
+    'c' 1fr
+    'b' 45px
+      / 1fr;
+  justify-items: center;
+  align-items: center;
+  background: rgba(29, 55, 38, .6);
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+
+
+  &-user{
+    grid-area: t;
+    padding-top: 55px;
+  }
+  &-socials{
+    grid-area: c;
+  }
+  &-link-btns{
+    grid-area: b;
+    height: 100%;
+    justify-self: stretch;
+    background: $green;
+  }
+}
+
+
+
+//-------------- user
+.user__pic{
+  width: 141px;
+  height: 141px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.user__pic-img{
+  display: block;
+  max-width: 150%;
+  height: auto;
+}
+.user__description{
+  text-align: center;
+}
+.user__name{
+  font-size: 1.75rem;
+}
+
+//-------------- socials
+.socials{
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+
+
+  &__link-icon{
+    width: 30px;
+    height: 30px;
+    display: block;
+    fill: #BDC7C1;
+    fill-opacity: .5;
+    transition: .3s;
+    &:hover{
+      fill: $dark-green;
+      fill-opacity: 1;
+    }
+  }
+}
+
+//-------------- links
+.links{
+  display: flex;
+  height: 100%;
+
+  &__item{
+    background: $green;
+    transition: .3s;
+    flex: 1 1 auto;
+    border-right: 1px solid #fff;
+    &:last-child{
+      border-right: 1px none lime;
+    }
+    padding: 12px 0;
+    text-align: center;
+
+    &:hover{
+      background: $dark-green;
+      cursor: pointer;
+    }
+  }
+
+  &__link{
+    text-decoration: none;
+    color: #fff;
+  }
+}

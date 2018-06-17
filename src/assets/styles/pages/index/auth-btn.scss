@@ -1,0 +1,15 @@
+.auth-btn{
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px 30px;
+  display: inline-block;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: .3s;
+
+  &:hover{
+    border-color: $dark-green;
+    background: $dark-green;
+
+  }
+}
