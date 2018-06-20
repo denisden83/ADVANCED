@@ -8,3 +8,13 @@
   font-style: normal;
   font-display: block;
 }
+
+@font-face {
+  font-family: 'sansus';
+  //font-family: 'sansus_webissimoregular';
+  src: url('./assets/fonts/sansus-webissimo-regular-webfont.woff2') format('woff2'),
+  url('./assets/fonts/sansus-webissimo-regular-webfont.woff') format('woff'),
+  url('./assets/fonts/sansus-webissimo-regular-webfont.svg#sansus_webissimoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

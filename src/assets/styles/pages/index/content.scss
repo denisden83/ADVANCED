@@ -1,6 +1,6 @@
 .auth-block__content{
   width: 380px;
-  height: 410px;
+  height: 395px;
   display: grid;
   grid-template:
     't' 2.5fr
@@ -16,7 +16,7 @@
 
   &-user{
     grid-area: t;
-    padding-top: 55px;
+    padding-top: 40px;
   }
   &-socials{
     grid-area: c;
@@ -53,50 +53,7 @@
 }
 
 //-------------- socials
-.socials{
-  display: flex;
-  justify-content: space-between;
-  width: 150px;
-
-
-  &__link-icon{
-    width: 30px;
-    height: 30px;
-    display: block;
-    fill: #BDC7C1;
-    fill-opacity: .5;
-    transition: .3s;
-    &:hover{
-      fill: $dark-green;
-      fill-opacity: 1;
-    }
-  }
-}
+/* look for block SOCIALS in the file COMMON PARTS*/
 
 //-------------- links
-.links{
-  display: flex;
-  height: 100%;
-
-  &__item{
-    background: $green;
-    transition: .3s;
-    flex: 1 1 auto;
-    border-right: 1px solid #fff;
-    &:last-child{
-      border-right: 1px none lime;
-    }
-    padding: 12px 0;
-    text-align: center;
-
-    &:hover{
-      background: $dark-green;
-      cursor: pointer;
-    }
-  }
-
-  &__link{
-    text-decoration: none;
-    color: #fff;
-  }
-}
+/* look for block LINKS in the file COMMON PARTS*/

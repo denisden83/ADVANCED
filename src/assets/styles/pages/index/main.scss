@@ -12,7 +12,7 @@
 
   display: grid;
   align-items: center;
-  justify-items: center;
+  //justify-items: center;
 }
 .auth-block__auth-btn{
   align-self: start;
@@ -20,8 +20,13 @@
   margin-right: 160px;
   margin-top: 25px;
 }
+.auth-block__content-wrapper{
+  display: flex;
+  justify-content: space-around;
+}
 .auth-block__content{
-
+}
+.login-block__content{
 }
 
 .auth-block__writing{
