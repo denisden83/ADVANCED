@@ -1,5 +1,8 @@
 extends ../auth.layout.pug
 
+block variables
+  - var title = 'Welcome'
+
 block content
   .auth-block
     //---------------------------- auth-btn
@@ -7,31 +10,72 @@ block content
 
       a(href='#').auth-btn Авторизоваться
 
-    //---------------------------- content
-    .auth-block__content
-      .auth-block__content-user
 
-        .user
-          .user__pic
-            +image('avatar-big.jpg', 'avatar', 'user__pic-img')
-          .user__description
-            .user__name Владимир Астахов
-            .user__info Личный сайт веб разработчика
-      .auth-block__content-socials
+    //---------------------------- temporary wrapper
+    .auth-block__content-wrapper
+      //---------------------------- content
+      .auth-block__content
+        .auth-block__content-user
 
-        ul.socials
-          each item in socials
-            li.socials__item
-              a(href=`${item[1]}`).socials__link
-                +icon(`${item[0]}`, 'socials__link-icon')
-      .auth-block__content-link-btns
+          .user
+            .user__pic
+              +image('avatar-big.jpg', 'avatar', 'user__pic-img')
+            .user__description
+              .user__name Владимир Астахов
+              .user__info Личный сайт веб разработчика
+        .auth-block__content-socials
 
-        ul.links
-          each item in linksHeader
-            li.links__item
-              a.links__link(href="#")= `${item}`
+          ul.socials
+            each item in socials
+              li.socials__item
+                a(href=`${item[1]}`).socials__link
+                  +icon(`${item[0]}`, 'socials__link-icon')
+        .auth-block__content-link-btns
 
+          ul.links
+            each item in linksWelcome
+              li.links__item
+                a.links__link(href="#")= `${item}`
 
+      //---------------------------- content-login
+      .login-block__content
+        .login-block__content-form
+
+          .form
+            .block-title.form__title Авторизуйтесь
+            .form__input-block
+              input.form__input(name="login" type="text" placeholder="Логин")
+              +icon('login', 'form__icon')
+            .form__input-block
+              input.form__input(name="login" type="password" placeholder="Пароль")
+              +icon('password', 'form__icon')
+
+        .login-block__content-captcha
+
+          .captcha
+            .captcha__row
+              label.captcha__checkbox-block
+                input.captcha__checkbox-input(type="checkbox" name="person")
+                .captcha__checkbox-fake
+                .captcha__checkbox-title Я человек
+            .captcha__row
+              .captcha__question Вы точно не робот?
+            .captcha__row.captcha__row--radio
+              label.captcha__radio-block
+                input.captcha__radio-input(type="radio" name="sure")
+                .captcha__radio-fake
+                .captcha__radio-title Да
+              label.captcha__radio-block
+                input.captcha__radio-input(type="radio" name="sure")
+                .captcha__radio-fake
+                .captcha__radio-title Не уверен
+
+        .login-block__content-link-btns
+
+          ul.links
+            each item in linksLogin
+              li.links__item
+                a.links__link(href="#")= `${item}`
 
     //---------------------------- writing
     .auth-block__writing
