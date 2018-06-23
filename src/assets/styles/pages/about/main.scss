@@ -1,0 +1,17 @@
+.wrapper-about{
+  display: grid;
+  grid-template:
+    "hero" 620px
+    "about" minmax(830px, max-content)
+    "map" 1100px
+    / 1fr;
+}
+.hero{
+  grid-area: hero;
+}
+.about{
+  grid-area: about;
+}
+.map{
+  grid-area: map;
+}

@@ -1,6 +1,7 @@
 .auth-block__content{
   width: 380px;
-  height: 395px;
+  //height: 395px;
+  height: 427px;
   display: grid;
   grid-template:
     't' 2.5fr
@@ -29,8 +30,6 @@
   }
 }
 
-
-
 //-------------- user
 .user__pic{
   width: 141px;
@@ -53,7 +52,7 @@
 }
 
 //-------------- socials
-/* look for block SOCIALS in the file COMMON PARTS*/
+/* look for block SOCIALS in the file COMMON */
 
 //-------------- links
-/* look for block LINKS in the file COMMON PARTS*/
+/* look for block LINKS in the file COMMON-INDEX */

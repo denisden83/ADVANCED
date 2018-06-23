@@ -1,5 +1,89 @@
-//----- user block -----//
-.user__pic-img{
-  width: 220px;
-  height: 220px;
+.hero{
+  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  background: url("./assets/images/water.jpg") no-repeat;
+  background-size: cover;
+  height: 100%;
+  color: #ffffff;
+}
+.container-hero{
+  position: relative;
+  height: 100%;
+  display: grid;
+  align-items: center;
+}
+.hero__links{
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+.hero__menu{
+  position: absolute;
+  top: 30px;
+  right: 0;
+}
+.hero__block{
+  position: relative;
+}
+.hero__user{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero__down-btn{
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+}
+
+//------------------ socials
+.socials__link-icon_section-hero{
+  fill: #FFFFFF;
+  fill-opacity: 1;
+//
+}
+//------------------ hamburger
+.hamburger__svg{
+  width: 40px;
+  height: 35px;
+  fill: #FFFFFF;
+  transition: .3s;
+  &:hover{
+    fill: $dark-green;
+  }
+}
+//------------------ section-writing
+.hero__writing{
+
+}
+.section-title__svg{
+  fill: #ffffff;
+  fill-opacity: .2;
+  margin: 0 auto;
+  //max-width: 1200px;
+  width: 100%;
+
+  height: 330px;
+  display: block;
+}
+//------------------ user
+
+//------------------ down-btn
+.down-btn__svg{
+  width: 26px;
+  height: 16px;
+  fill: #fff;
+  fill-opacity: .7;
+  transition: .3s;
+  &:hover{
+    fill: $dark-green;
+    fill-opacity: 1;
+  }
 }

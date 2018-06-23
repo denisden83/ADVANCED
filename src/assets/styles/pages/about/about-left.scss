@@ -1,0 +1,49 @@
+.container-about-left{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.container-about-left{
+  padding-left: 2.5%;
+  //width: 90%;
+}
+.container-about-right{
+  padding-right: 2.5%;
+  //width: 90%;
+}
+.about__left-title{
+  margin-top: -55px;
+}
+.about__left-content{
+}
+
+//------------------ user-title
+.user-title{
+  position: relative;
+}
+.user-title__background{
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  fill: #E2EACF;
+  //fill-opacity: 0.1;
+}
+.user-title__heading{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+
+}
+
+
+//------------------ user-description
+.user-description__image{
+}
+.user-description__avatar{
+  width: 100%;
+  height: auto;
+}
+.user-description__title{
+  //margin-bottom: 25px;
+}

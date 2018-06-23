@@ -25,24 +25,3 @@
     color: #fff;
   }
 }
-
-//-------------- socials
-.socials{
-  display: flex;
-  justify-content: space-between;
-  width: 150px;
-
-
-  &__link-icon{
-    width: 30px;
-    height: 30px;
-    display: block;
-    fill: #BDC7C1;
-    fill-opacity: .5;
-    transition: .3s;
-    &:hover{
-      fill: $dark-green;
-      fill-opacity: 1;
-    }
-  }
-}

@@ -1,0 +1,80 @@
+.login-block__content{
+  width: 380px;
+  //height: 395px;
+  height: 427px;
+  display: grid;
+  grid-template:
+          't' 2.2fr
+          'c' 1.3fr
+          'b' 45px
+           / 1fr;
+  background: rgba(29, 55, 38, .6);
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+
+  &-form{
+    grid-area: t;
+  }
+  &-check{
+    grid-area: c;
+  }
+  &-link-btns{
+    grid-area: b;
+    height: 100%;
+    justify-self: stretch;
+    background: $green;
+  }
+}
+//--------------------------- form
+.form{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__title{
+  margin-top: 13px;
+  margin-bottom: auto;
+}
+.form__input-block{
+  width: 90%;
+  display: flex;
+  position: relative;
+  margin-top: 20px;
+}
+.form__input{
+  flex: auto;
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-size: 16px;
+  color: #BDBDBE;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border-left: 45px solid #EFEFE9;
+  transition: .3s;
+  &:focus{
+    outline: 0;
+    background: transparent;
+  }
+  &:focus + .form__icon{
+    fill: $green;
+  }
+}
+.form__icon{
+  width: 15px;
+  height: 17px;
+  fill: #C4CBCD;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  transition: .3s;
+}
+//--------------------------- captcha
+//--------------------------- checkbox
+//--------------------------- radio
+
+
+
+//-------------- links
+/* look for block LINKS in the file COMMON-INDEX*/
