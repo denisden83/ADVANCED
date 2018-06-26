@@ -47,5 +47,31 @@
   text-align: center;
   margin-bottom: 1.5rem;
   //white-space: nowrap;
+}
+//-------------- links wellcome and login
+.links{
+  display: flex;
+  height: 100%;
 
+  &__item{
+    background: $green;
+    transition: .3s;
+    flex: 1 1 auto;
+    border-right: 1px solid #fff;
+    &:last-child{
+      border-right: 1px none lime;
+    }
+    padding: 12px 0;
+    text-align: center;
+
+    &:hover{
+      background: $dark-green;
+      cursor: pointer;
+    }
+  }
+
+  &__link{
+    text-decoration: none;
+    color: #fff;
+  }
 }

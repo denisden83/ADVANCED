@@ -1,42 +1,42 @@
-//- footer.footer
-//-  h2 Copyright &copy;
 //------------------------------------------ footer
 footer.footer
 
-    //-------------------------- top
-    .footer__top
+  //-------------------------- top
+  .footer__top
 
-        //-------left
-        .footer__left
+    .container
+      //-------left
+      .footer__left
 
-            .footer__left-goal Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
-        //-------center
-        .footer__center
+        .footer__left-goal Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+      //-------center
+      .footer__center
 
-            .footer__center-links
+        .footer__center-links
 
-                ul.links
-                    each item in linksFooter
-                        li.links__item= `${item}`
+          ul.links
+            each item in linksFooter
+              li.links__item= `${item}`
 
-            .footer__center-icons
+        .footer__center-icons
 
-                ul.socials
-                    each item in socials
-                        li.socials__item
-                            a(href=`${item[1]}`).socials__link
-                                +icon(`${item[0]}`, 'socials__link-icon')
-        //-------right
-        .footer__right
-            .footer__right-quote Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
-            .footer__right-person - Martin Golding
+          ul.socials
+            each item in socials
+              li.socials__item
+                a(href=`${item[1]}`).socials__link
+                  +icon(`${item[0]}`, 'socials__link-icon')
+      //-------right
+      .footer__right
+        .footer__right-quote Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+        .footer__right-person - Martin Golding
 
-    //------------------------- bottom
-    .footer__bottom
+  //------------------------- bottom
+  .footer__bottom
 
-        .signature
-            .signature__auth-name &copy; Владимир Астахов
-            .signature__vertical-bar |
-            .signature__info Создано с любовью в LoftSchool
-            .signature__vertical-bar |
-            .signature__year 2016
+    .container
+      .signature
+        .signature__auth-name &copy; Владимир Астахов
+        .signature__vertical-bar |
+        .signature__info Создано с любовью в LoftSchool
+        .signature__vertical-bar |
+        .signature__year 2016

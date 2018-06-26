@@ -1,0 +1,23 @@
+h2 HELLO THERE!
+
+script(type="text/x-template")#skills-block
+  ul.skills-list
+      li.skills-list__item(v-for="skill in skills")
+        skills-row(:skill="skill")
+
+script(type="text/x-template")#skills-group
+  .skills-row
+    .skills-row__title {{skill.skillsGroup}}
+    ul.skills-row__list
+      li.skills-row__item(v-for="(skillPercents, skillName) in skill.skills")
+        skill(
+          :skill-name="skillName",
+          :skill-percents="skillPercents"
+        )
+
+script(type="text/x-template")#skill
+  figure.skill
+    svg(viewBox='0 0 110 110').skill__svg
+      circle(r="38" cx="50%" cy="50%" fill="none").skill__circle.skill__circle--under
+      circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" v-bind:class="`circle-${skillPercents}`").skill__circle.skill__circle--over
+    span.skill__title {{skillName}}
