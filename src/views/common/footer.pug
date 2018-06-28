@@ -16,7 +16,8 @@ footer.footer
 
           ul.links
             each item in linksFooter
-              li.links__item= `${item}`
+              li.links__item
+                a.links__link(href=item[1]) #{item[0]}
 
         .footer__center-icons
 

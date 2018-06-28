@@ -1,13 +1,13 @@
 .auth-block{
-  position: relative;
+  position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   overflow: hidden;
-  background: url("./assets/images/water.jpg") no-repeat;
+  background: url("./assets/images/water.jpg") 50% no-repeat;
   background-size: cover;
-  height: 100vh;
+  //height: 100vh;
   color: #ffffff;
 
   display: grid;

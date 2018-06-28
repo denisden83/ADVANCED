@@ -48,6 +48,10 @@
 }
 .user__name{
   font-size: 1.75rem;
+  white-space: nowrap;
+}
+.user__info{
+  white-space: nowrap;
 }
 
 //-------------- socials

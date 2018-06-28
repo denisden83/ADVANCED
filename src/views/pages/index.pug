@@ -35,7 +35,7 @@ block content
           ul.links
             each item in linksWelcome
               li.links__item
-                a.links__link(href="#")= `${item}`
+                a.links__link(href=`${item[1]}`)= `${item[0]}`
 
       //---------------------------- content-login
       .login-block__content
@@ -75,7 +75,7 @@ block content
           ul.links
             each item in linksLogin
               li.links__item
-                a.links__link(href="#")= `${item}`
+                a.links__link(href=`${item[1]}`)= `${item[0]}`
 
     //---------------------------- writing
     .auth-block__writing
