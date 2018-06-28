@@ -12,6 +12,28 @@ import Vue from "vue";
 
 const skill = {
   props: ["skillName", "skillPercents"],
+  data() {
+    return {
+      svgClassIsActive: false
+    };
+  },
+  methods: {
+    drawCircle() {
+      let skillBlock = this.$refs.skillBlock;
+      let bottomPosition =
+        window.innerHeight - skillBlock.getBoundingClientRect().bottom;
+      this.svgClassIsActive = bottomPosition > 0;
+    }
+  },
+  created() {
+    window.addEventListener("scroll", this.drawCircle);
+  },
+  mounted() {
+    this.drawCircle();
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.drawCircle);
+  },
   template: "#skill"
 };
 

@@ -14,8 +14,8 @@ script(type="text/x-template")#skills-group
         )
 
 script(type="text/x-template")#skill
-  figure.skill
+  figure.skill(ref="skillBlock")
     svg(viewBox='0 0 110 110').skill__svg
       circle(r="38" cx="50%" cy="50%" fill="none").skill__circle.skill__circle--under
-      circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" v-bind:class="`circle-${skillPercents}`").skill__circle.skill__circle--over
+      circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" v-bind:class="svgClassIsActive ?`circle-${this.skillPercents}` : ''").skill__circle.skill__circle--over
     span.skill__title {{skillName}}
