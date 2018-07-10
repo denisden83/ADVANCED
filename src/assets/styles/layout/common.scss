@@ -1,4 +1,4 @@
-//-------------- socials
+/* -------------- socials  ----------- */
 .socials{
   display: flex;
   justify-content: space-between;
@@ -16,9 +16,13 @@
       fill: $dark-green;
       fill-opacity: 1;
     }
+    &_white-hover:hover{
+      fill: #fff;
+      fill-opacity: 1;
+    }
   }
 }
-//-------------- block-title
+/* -------------- block-title  ----------- */
 .block-title{
   text-transform: uppercase;
   font-family: sansus, sans-serif;
@@ -35,7 +39,7 @@
   font-size: 3.9rem;
   padding: 0.7rem;
 }
-//-------------- block-subtitle
+/* -------------- block-subtitle  ----------- */
 .block-subtitle{
   color: #566358;
   text-transform: uppercase;
@@ -48,7 +52,7 @@
   margin-bottom: 1.5rem;
   //white-space: nowrap;
 }
-//-------------- links wellcome and login
+/* -------------- links wellcome and login  ----------- */
 .links{
   display: flex;
   height: 100%;
@@ -74,4 +78,20 @@
     text-decoration: none;
     color: #fff;
   }
+}
+
+/* -------------- triangle block  ----------- */
+.about__triangle{
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+}
+.triangle_fill-beige{
+  fill: #EBEFE1;
+}
+.triangle_fill-white{
+  fill: #F3F5EF;
+}
+.triangle__svg{
+  display: block;
 }

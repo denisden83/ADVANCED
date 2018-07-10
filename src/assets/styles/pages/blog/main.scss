@@ -1,0 +1,17 @@
+.wrapper-blog{
+  display: grid;
+  grid-template:
+          "hero" 500px
+          "about" 1100px
+          "footer" minmax(185px, max-content)
+          / 1fr;
+}
+.hero{
+  grid-area: hero;
+}
+.about{
+  grid-area: about;
+}
+.footer{
+  grid-area: footer;
+}

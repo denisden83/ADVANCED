@@ -1,3 +1,5 @@
+const fs = require("fs");
+
 module.exports = {
   syntax: "postcss-scss",
   plugins: [
@@ -9,9 +11,12 @@ module.exports = {
       cascade: false
     }),
     require("postcss-advanced-variables")({
-      variables: require("./src/assets/styles/variables")
+      variables: JSON.parse(
+        fs.readFileSync("./src/assets/styles/variables.json", "utf-8")
+      )
+      // variables: require("./src/assets/styles/variables")
     }),
-    require("postcss-nested"),
+    // require("postcss-nested"),
     require("postcss-rgb"),
     require("postcss-inline-comment"),
     require("postcss-inline-svg")({
@@ -19,6 +24,7 @@ module.exports = {
       path: "./src/assets/images/icons"
     }),
     require("postcss-svgo"),
+    require("postcss-node-sass"),
     require("cssnano")()
   ]
 };
